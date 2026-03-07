@@ -17,11 +17,10 @@ pip install -r requirements.txt
 
 # Check HuggingFace login
 echo -e "\n[3/6] Checking HuggingFace authentication..."
-if huggingface-cli whoami > /dev/null 2>&1; then
+if hf auth login > /dev/null 2>&1; then
     echo "✓ Already logged in to HuggingFace"
 else
-    echo "Please login to HuggingFace (required for SAM3 access):"
-    huggingface-cli login
+    echo "Login using hf auth login and rerun script"
 fi
 
 # Create data directory structure

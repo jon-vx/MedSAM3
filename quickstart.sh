@@ -27,17 +27,6 @@ fi
 echo -e "\n[4/6] Creating data directory structure..."
 python prepare_data.py create --output_dir data
 
-# Run example usage
-echo -e "\n[5/6] Running example usage (this may take a few minutes)..."
-echo "This will download the SAM3 model (~3GB) and test LoRA application."
-read -p "Continue? (y/n) " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    python example_usage.py
-else
-    echo "Skipped example usage"
-fi
-
 # Print next steps
 echo -e "\n[6/6] Setup complete!"
 echo "======================================"

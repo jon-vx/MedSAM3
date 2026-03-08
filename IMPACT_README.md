@@ -1,4 +1,10 @@
 # MedSAM3 - Impact 
 
+## Usage 
 
-- run hf auth login before quickstart.sh
+**Inference**
+- infer_sam.py is the proper script for running inference
+
+**Trainign**
+- TBD
+

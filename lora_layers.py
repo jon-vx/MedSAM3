@@ -536,6 +536,6 @@ def load_lora_weights(model: nn.Module, load_path: str):
         model: Model with LoRA layers
         load_path: Path to LoRA weights
     """
-    lora_state_dict = torch.load(load_path)
+    lora_state_dict = torch.load(load_path, map_location="cpu")
     model.load_state_dict(lora_state_dict, strict=False)
     print(f"Loaded LoRA weights from {load_path}")
